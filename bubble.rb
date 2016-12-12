@@ -29,7 +29,7 @@ def bubble_sort_by(words)
 			
 			
 			if rightIndex < words.length
-				if (i <=> words[rightIndex]) > 0
+				if yield(i, words[rightIndex]) > 0
 					 words[leftIndex] = words[rightIndex]
 					 words[rightIndex] = i
 				end
@@ -40,4 +40,4 @@ def bubble_sort_by(words)
 	end
 end
 
-b = bubble_sort_by(["zulu","hi","pao", "bye", "ciao", "danke"])
+b = bubble_sort_by(["zzzzzz","hi", "hello", "hey", "zulu", "pao"]) { |left, right| left.length - right.length }
